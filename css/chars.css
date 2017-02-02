@@ -1,0 +1,159 @@
+.full {
+  height: 60px;
+}
+.below {
+  margin-top: 20px;
+}
+.1-5 {
+  width: 30px;
+}
+.1-75 {
+  width: 35px;
+}
+.2-5 {
+  width: 50px;
+}
+.char {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  width: 20px;
+}
+.char.AA {
+  background-image: url("../chars/AA.gif");
+}
+.char.AE {
+  background-image: url("../chars/AE.gif");
+}
+.char.AH {
+  background-image: url("../chars/AH.gif");
+}
+.char.AO {
+  background-image: url("../chars/AO.gif");
+}
+.char.AW {
+  background-image: url("../chars/AW.gif");
+}
+.char.AY {
+  background-image: url("../chars/AY.gif");
+}
+.char.B {
+  margin-top: 20px;
+  width: 35px;
+  background-image: url("../chars/B.gif");
+}
+.char.CH {
+  width: 50px;
+  background-image: url("../chars/CH.gif");
+}
+.char.D {
+  width: 35px;
+  background-image: url("../chars/D.gif");
+}
+.char.DH {
+  width: 35px;
+  background-image: url("../chars/DH.gif");
+}
+.char.EH {
+  background-image: url("../chars/EH.gif");
+}
+.char.EY {
+  background-image: url("../chars/EY.gif");
+}
+.char.F {
+  height: 60px;
+  background-image: url("../chars/F.gif");
+}
+.char.G {
+  width: 35px;
+  background-image: url("../chars/G.gif");
+}
+.char.HH {
+  background-image: url("../chars/HH.gif");
+}
+.char.IH {
+  background-image: url("../chars/IH.gif");
+}
+.char.IY {
+  background-image: url("../chars/IY.gif");
+}
+.char.JH {
+  margin-top: 20px;
+  width: 35px;
+  background-image: url("../chars/JH.gif");
+}
+.char.K {
+  background-image: url("../chars/K.gif");
+}
+.char.L {
+  background-image: url("../chars/L.gif");
+}
+.char.M {
+  width: 35px;
+  background-image: url("../chars/M.gif");
+}
+.char.N {
+  background-image: url("../chars/N.gif");
+}
+.char.NG {
+  height: 60px;
+  width: 35px;
+  background-image: url("../chars/NG.gif");
+}
+.char.OW {
+  background-image: url("../chars/OW.gif");
+}
+.char.OY {
+  background-image: url("../chars/OY.gif");
+}
+.char.P {
+  margin-top: 20px;
+  background-image: url("../chars/P.gif");
+}
+.char.R {
+  background-image: url("../chars/R.gif");
+}
+.char.S {
+  background-image: url("../chars/S.gif");
+}
+.char.SH {
+  width: 35px;
+  background-image: url("../chars/SH.gif");
+}
+.char.T {
+  background-image: url("../chars/T.gif");
+}
+.char.TH {
+  width: 35px;
+  background-image: url("../chars/TH.gif");
+}
+.char.UH {
+  width: 30px;
+  background-image: url("../chars/UH.gif");
+}
+.char.UW {
+  background-image: url("../chars/UW.gif");
+}
+.char.V {
+  width: 35px;
+  height: 60px;
+  background-image: url("../chars/V.gif");
+}
+.char.W {
+  background-image: url("../chars/W.gif");
+}
+.char.Y {
+  margin-top: 20px;
+  background-image: url("../chars/Y.gif");
+}
+.char.Z {
+  width: 35px;
+  background-image: url("../chars/Z.gif");
+}
+.char.ZH {
+  width: 35px;
+  background-image: url("../chars/ZH.gif");
+}

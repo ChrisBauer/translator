@@ -1,0 +1,210 @@
+@char: "../chars";
+
+@base-width: 20px;
+@base-height: 40px;
+
+.full {
+    height: @base-height * 1.5;
+}
+
+.below {
+   margin-top: @base-height * 0.5;
+} 
+
+.1-5 {
+    width: @base-width * 1.5;
+}
+
+.1-75 {
+    width: @base-width * 1.75;
+}
+
+.2-5 {
+    width: @base-width * 2.5;
+}
+
+.char {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40px;
+    width: 20px;
+
+    .space {
+    }
+
+    &.AA {
+        background-image: url("@{char}/AA.gif");
+    }
+
+    &.AE {
+        background-image: url("@{char}/AE.gif");
+    }
+
+    &.AH {
+        background-image: url("@{char}/AH.gif");
+    }
+
+    &.AO {
+        background-image: url("@{char}/AO.gif");
+    }
+
+    &.AW {
+        background-image: url("@{char}/AW.gif");
+    }
+
+    &.AY {
+        background-image: url("@{char}/AY.gif");
+    }
+
+    &.B {
+        .below;
+        .1-75;
+        background-image: url("@{char}/B.gif");
+    }
+
+    &.CH {
+        .2-5;
+        background-image: url("@{char}/CH.gif");
+    }
+
+    &.D {
+        .1-75;
+        background-image: url("@{char}/D.gif");
+    }
+
+    &.DH {
+        .1-75;
+        background-image: url("@{char}/DH.gif");
+    }
+
+    &.EH {
+        background-image: url("@{char}/EH.gif");
+    }
+
+    &.EY {
+        background-image: url("@{char}/EY.gif");
+    }
+
+    &.F {
+        .full;
+        background-image: url("@{char}/F.gif");
+    }
+
+    &.G {
+        .1-75;
+        background-image: url("@{char}/G.gif");
+    }
+
+    &.HH {
+        background-image: url("@{char}/HH.gif");
+    }
+
+    &.IH {
+        background-image: url("@{char}/IH.gif");
+    }
+
+    &.IY {
+        background-image: url("@{char}/IY.gif");
+    }
+
+    &.JH {
+        .below;
+        .1-75;
+        background-image: url("@{char}/JH.gif");
+    }
+
+    &.K {
+        background-image: url("@{char}/K.gif");
+    }
+
+    &.L {
+        background-image: url("@{char}/L.gif");
+    }
+
+    &.M {
+        .1-75;
+        background-image: url("@{char}/M.gif");
+    }
+
+    &.N {
+        background-image: url("@{char}/N.gif");
+    }
+
+    &.NG {
+        .full;
+        .1-75;
+        background-image: url("@{char}/NG.gif");
+    }
+
+    &.OW {
+        background-image: url("@{char}/OW.gif");
+    }
+
+    &.OY {
+        background-image: url("@{char}/OY.gif");
+    }
+
+    &.P {
+        .below;
+        background-image: url("@{char}/P.gif");
+    }
+
+    &.R {
+        background-image: url("@{char}/R.gif");
+    }
+
+    &.S {
+        background-image: url("@{char}/S.gif");
+    }
+
+    &.SH {
+        .1-75;
+        background-image: url("@{char}/SH.gif");
+    }
+
+    &.T {
+        background-image: url("@{char}/T.gif");
+    }
+
+    &.TH {
+        .1-75;
+        background-image: url("@{char}/TH.gif");
+    }
+
+    &.UH {
+        .1-5;
+        background-image: url("@{char}/UH.gif");
+    }
+
+    &.UW {
+        background-image: url("@{char}/UW.gif");
+    }
+
+    &.V {
+        .1-75;
+        .full;
+        background-image: url("@{char}/V.gif");
+    }
+
+    &.W {
+        background-image: url("@{char}/W.gif");
+    }
+
+    &.Y {
+        .below;
+        background-image: url("@{char}/Y.gif");
+    }
+
+    &.Z {
+        .1-75;
+        background-image: url("@{char}/Z.gif");
+    }
+
+    &.ZH {
+        .1-75;
+        background-image: url("@{char}/ZH.gif");
+    }
+}

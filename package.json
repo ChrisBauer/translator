@@ -1,0 +1,19 @@
+{
+  "name": "lang",
+  "version": "1.0.0",
+  "description": "Language converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lessc":" lessc css/chars.less css/chars.css",
+    "start": "npm run lessc && http-server ."
+  },
+  "author": "Chris Bauer <cbauer@outlook.com> (http://github.com/chrisbauer)",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {
+    "less": "^2.7.2"
+  }
+}
