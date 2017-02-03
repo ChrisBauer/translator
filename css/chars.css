@@ -150,7 +150,7 @@
   background-image: url("../chars/T.gif");
 }
 .char.TH {
-  width: 35px;
+  /* width: 35px; */
   background-image: url("../chars/TH.gif");
 }
 .char.UH {
