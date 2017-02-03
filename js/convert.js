@@ -83,6 +83,7 @@ function convertFromIPA (text) {
 const ipaMap = {
     ɔ: 'AA', // dAWn
     æ: 'AE', // hAt
+    ɒ: 'AH', // frOm
     ʌ: 'AH', // bUt
     ə: 'AH', // About
     ɑ: 'AA', // dOn
