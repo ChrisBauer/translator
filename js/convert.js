@@ -135,6 +135,11 @@ function fetchText(text) {
     const headers = new Headers ({'Content-Type': 'application/x-www-form-urlencoded'});
     const formData = {
         output_dialect: 'am',
+        submit: 'Show transcription',
+        output_style:'only_tr',
+        preBracket:'',
+        postBracket:'',
+        speech_support:1,
         text_to_transcribe: text
     };
     const encoded = Object.keys(formData).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(formData[key])).join('&');
