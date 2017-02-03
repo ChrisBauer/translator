@@ -27,6 +27,7 @@ function convert (text, destEl) {
             el.classList.add(c);
         }
         if (c.match(/[.,?'"\-—–!@#$%^&*()\[\]]/)) {
+            el.classList.add('punc');
             el.innerText = c;
         }
         return el;

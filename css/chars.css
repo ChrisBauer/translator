@@ -43,6 +43,9 @@
   font-size: 40px;
   line-height: 45px;
 }
+.char.punc {
+  margin-left: -20px;
+}
 .char.AA {
   background-image: url("../chars/AA.gif");
 }
