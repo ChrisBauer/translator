@@ -107,3 +107,37 @@ const ipaMap = {
 // Build a list of prefix chars - that is, IPA characters which
 // may be part of a multiple-character phoneme.
 const prefixChars = Object.keys(ipaMap).filter(key => key.length > 1).map(key => key.charAt(0));
+
+
+function fetchText(text) {
+    const url = 'http://lingorado.com/ipa/';
+    const headers = new Headers ({'Content-Type': 'application/x-www-form-urlencoded'});
+    const formData = {
+        output_dialect: 'am',
+        text_to_transcribe: text,
+        submit: 'Show transcription',
+        output_style:'only_tr',
+        preBracket:'',
+        postBracket:'',
+        speech_support:1
+    };
+    const encoded = Object.keys(formData).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(formData[key])).join('&');
+
+    fetch(url, {method: 'POST', headers: headers, body: encoded})
+        .then(res => res.text())
+        .then(text => {
+            const start = text.indexOf('transcr_output">') + 'transcr_output">'.length;
+            const intermediate = text.substring(start);
+            return intermediate.substring(0, intermediate.indexOf('<br />'));
+        })
+        .then(str => str
+            .replace(/<span/gi, '')
+            .replace(/<\/span>/gi, '')
+            .replace(/<\/a>/gi, '')
+            .replace(/<a/gi, '')
+            .replace(/[a-z]+="[a-z0-9_#\ \(\)]+"[\ >]?/gi, '')
+            .replace(/\s+/gi, ' ')
+            .trim())
+        .then(str => console.log(str));
+}
+
