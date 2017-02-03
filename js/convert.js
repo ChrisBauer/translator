@@ -11,8 +11,20 @@ function convert (src, dest) {
         }
         return el;
     };
+
+    createWordEl = () => {
+        const el = document.createElement('div');
+        el.classList.add('word');
+        return el;
+    };
+
     const simple = convertFromIPA(textToConvert);
-    simple.split(' ').map(createSpanFn).forEach(el => destEl.appendChild(el));
+    const words = simple.split('~');
+    words.map(word => ({word: word, wordEl: createWordEl()})).forEach(({word, wordEl}) => {
+        word.trim().split(' ').map(createSpanFn).forEach(charEl => wordEl.appendChild(charEl));
+        destEl.appendChild(wordEl);
+    });
+    // simple.split(' ').map(createSpanFn).forEach(el => destEl.appendChild(el));
 }
 
 function convertFromIPA (text) {

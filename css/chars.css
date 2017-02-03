@@ -13,6 +13,13 @@
 .2-5 {
   width: 50px;
 }
+.word {
+  display: inline-block;
+  margin-left: 20px;
+}
+.word:first-child {
+  margin-left: 0;
+}
 .char {
   display: inline-block;
   vertical-align: top;
