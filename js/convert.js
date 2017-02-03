@@ -14,6 +14,7 @@ function config () {
         outputEl.innerHTML = 'Loading...';
         fetchText(textToTranslate)
             .then(ipa => convert(ipa, outputEl))
+            .catch(err => outputEl.innerText = "Failed to load :'(");
     });
 }
 
@@ -159,6 +160,6 @@ function fetchText(text) {
             .replace(/[a-z]+="[a-z0-9_#\ \(\)]+"[\ >]?/gi, '')
             .replace(/&nbsp;/gi, '')
             .replace(/\s+/gi, ' ')
-            .trim())
+            .trim());
 }
 
