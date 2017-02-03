@@ -39,8 +39,10 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 40px;
-    width: 20px;
+    height: @base-height;
+    width: @base-width;
+    font-size: @base-height;
+    line-height: @base-height * 1.125;
 
     .space {
     }
@@ -171,7 +173,6 @@
     }
 
     &.SH {
-        .1-75;
         background-image: url("@{char}/SH.gif");
     }
 

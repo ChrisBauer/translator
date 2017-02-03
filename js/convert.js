@@ -9,6 +9,9 @@ function convert (src, dest) {
         if (c != '~') {
             el.classList.add(c);
         }
+        if (c.match(/[.,?'"\-—–!@#$%^&*()\[\]]/)) {
+            el.innerText = c;
+        }
         return el;
     };
 
@@ -28,6 +31,7 @@ function convert (src, dest) {
 }
 
 function convertFromIPA (text) {
+    text = text.replace(/[ˌˈ]/g,'');
     const chars = [];
     for (let i = 0; i < text.length; i++) {
         if (text.charAt(i).match(/\s/)) {
@@ -36,7 +40,7 @@ function convertFromIPA (text) {
         else {
             let c = text.charAt(i);
             if (i == text.length - 1 || prefixChars.indexOf(c) == -1) {
-                chars.push(ipaMap[c]);
+                chars.push(ipaMap[c] ? ipaMap[c] : c);
             }
             else {
                 const twoChars = c + text.charAt(i + 1);
@@ -76,6 +80,7 @@ const ipaMap = {
     f: 'F', // Forget
     g: 'G', // forGet
     h: 'HH', // Happy
+    ɪ: 'IH', // If
     i: 'IY', // fEE
     ʤ: 'JH', // Jump
     k: 'K', // Call

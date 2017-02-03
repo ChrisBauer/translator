@@ -28,6 +28,8 @@
   background-size: cover;
   height: 40px;
   width: 20px;
+  font-size: 40px;
+  line-height: 45px;
 }
 .char.AA {
   background-image: url("../chars/AA.gif");
@@ -127,7 +129,6 @@
   background-image: url("../chars/S.gif");
 }
 .char.SH {
-  width: 35px;
   background-image: url("../chars/SH.gif");
 }
 .char.T {
