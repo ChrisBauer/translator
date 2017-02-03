@@ -5,13 +5,11 @@
         <title>Language Converter</title>
     </head>
     <body>
-        <div class="to-translate">
-            <!--             AY . W AA N T . T UW . S IY . IH F . DH IH S . W IH L . W AH R K . -->
-            wʌt ɪf aɪ æd ˌpʌŋkʧuˈeɪʃən? laɪk, ə ˈpɪriəd.
-        </div>
+        <textarea class="input"></textarea>
+        <button type="button" class="translate-button">Translate</button>
         <div class="translated"></div>
         <aside><script>
-            convert('.to-translate', '.translated');
+            config();
         </script></aside>
     </body>
 </html>

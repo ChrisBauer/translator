@@ -1,7 +1,24 @@
-function convert (src, dest) {
-    const textToConvert = document.querySelector(src).innerText;
-    const destEl = document.querySelector(dest);
+let inputEl;
+let outputEl;
+let button;
+function config () {
+    inputEl = document.querySelector('.input');
+    outputEl = document.querySelector('.translated');
+    button = document.querySelector('.translate-button');
 
+    button.addEventListener('click', function () {
+        const textToTranslate = inputEl.value;
+        if (!textToTranslate) {
+            return;
+        }
+        outputEl.innerHTML = 'Loading...';
+        fetchText(textToTranslate)
+            .then(ipa => convert(ipa, outputEl))
+    });
+}
+
+function convert (text, destEl) {
+    destEl.innerHTML = '';
     const createSpanFn = (c) => {
         const el = document.createElement('span');
         el.classList.add('char');
@@ -21,7 +38,7 @@ function convert (src, dest) {
         return el;
     };
 
-    const simple = convertFromIPA(textToConvert);
+    const simple = convertFromIPA(text);
     const words = simple.split('~');
     words.map(word => ({word: word, wordEl: createWordEl()})).forEach(({word, wordEl}) => {
         word.trim().split(' ').map(createSpanFn).forEach(charEl => wordEl.appendChild(charEl));
@@ -31,7 +48,7 @@ function convert (src, dest) {
 }
 
 function convertFromIPA (text) {
-    text = text.replace(/[ˌˈ]/g,'');
+    text = text.replace(/[ˌˈː]/g,'');
     const chars = [];
     for (let i = 0; i < text.length; i++) {
         if (text.charAt(i).match(/\s/)) {
@@ -114,16 +131,11 @@ function fetchText(text) {
     const headers = new Headers ({'Content-Type': 'application/x-www-form-urlencoded'});
     const formData = {
         output_dialect: 'am',
-        text_to_transcribe: text,
-        submit: 'Show transcription',
-        output_style:'only_tr',
-        preBracket:'',
-        postBracket:'',
-        speech_support:1
+        text_to_transcribe: text
     };
     const encoded = Object.keys(formData).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(formData[key])).join('&');
 
-    fetch(url, {method: 'POST', headers: headers, body: encoded})
+    return fetch(url, {method: 'POST', headers: headers, body: encoded})
         .then(res => res.text())
         .then(text => {
             const start = text.indexOf('transcr_output">') + 'transcr_output">'.length;
@@ -136,8 +148,8 @@ function fetchText(text) {
             .replace(/<\/a>/gi, '')
             .replace(/<a/gi, '')
             .replace(/[a-z]+="[a-z0-9_#\ \(\)]+"[\ >]?/gi, '')
+            .replace(/&nbsp;/gi, '')
             .replace(/\s+/gi, ' ')
             .trim())
-        .then(str => console.log(str));
 }
 
