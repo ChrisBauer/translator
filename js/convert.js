@@ -106,6 +106,8 @@ const ipaMap = {
     m: 'M', // Man
     n: 'N', // maN
     ŋ: 'NG', // haNG
+    əʊ: 'OW', // Own
+    oʊ: 'OW', // dOn't
     ɔɪ: 'OY', // vOIce
     p: 'P', // Parse
     r: 'R', // paRse
